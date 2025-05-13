@@ -153,7 +153,7 @@ func (i IndexFile) MustAdd(md *chart.Metadata, filename, baseURL, digest string)
 // Deprecated: Use index.MustAdd instead.
 func (i IndexFile) Add(md *chart.Metadata, filename, baseURL, digest string) {
 	if err := i.MustAdd(md, filename, baseURL, digest); err != nil {
-		slog.Error("skipping loading invalid entry for chart %q %q from %s: %s", md.Name, md.Version, filename, err)
+		// slog.Error("skipping loading invalid entry for chart %q %q from %s: %s", md.Name, md.Version, filename, err)
 	}
 }
 
